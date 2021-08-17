@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML"
+        "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>VariTex: Variational Neural Face Textures</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta property="og:title"
+          content="VariTex: Variational Neural Face Textures"/>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+
+<body>
+<style>
+    .citation {
+        background-color: lightgrey;
+        border: 2px dashed darkgrey;
+        font-size: 12px;
+        text-align: left;
+        margin-top: 2em;
+    }
+</style>
+<div id="main" class="container text-center">
+
+    <header role="banner">
+        <div class="row d-flex align-items-center justify-content-center ">
+            <div class="col-md-4"><a href="https://ethz.ch/" target="_blank"><img class="img-responsive" width="50%" alt="ETH Zurich Logo" src="https://ait.ethz.ch/people/buehler/public/various/logo_eth.png"></a></div>
+            <div class="col-md-4"><a href="https://ait.ethz.ch" target="_blank"><img class="img-responsive" width="50%" alt="AIT Logo"  src="https://ait.ethz.ch/img/logo-ait.png"></a></div>
+            <div class="col-md-4"><a href="https://google.com/" target="_blank"><img class="img-responsive" width="40%" alt="Google Logo" src="https://ait.ethz.ch/people/buehler/public/various/logo_google.png"></a></div>
+            </div>
+    <div class="col-md-12">
+        <hr>
+    </div>
+    <div class="col-md-12">
+        <h1>VariTex:<br>Variational Neural Face Textures</h1>
+
+    </div>
+
+    <div class="col-md-12">
+        <h5>
+            <a href="https://www.ait.ethz.ch/people/buehler"
+               target="_blank">Marcel C. Bühler</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+            <a href="https://www.meka.page/" target="_blank" title="Abhimitra Meka">Abhimitra Meka</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+            <a href="https://ait.ethz.ch/people/lig/" target="_blank" title="Gengyan Li">Gengyan Li</a><sup>1,2</sup>&nbsp;&nbsp;&nbsp;
+            <a href="https://thabobeeler.com/" target="_blank" title="Thabo Beeler">Thabo Beeler</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+            <a href="https://ait.ethz.ch/people/hilliges/" title="Otmar Hilliges">Otmar Hilliges</a><sup>1</sup>
+        </h5>
+    </div>
+    <div class="col-md-12"><h5>
+        <a href="https://ait.ethz.ch" target="_blank"><sup>1</sup>Advanced Interactive Technologies</a>,
+        <a href="https://ethz.ch/" target="_blank">ETH Zurich</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://google.com/" target="_blank"><sup>2</sup>Google</a>
+    </h5>
+    </div>
+        <div class="col-md-12"><h5>
+            <a href="http://iccv2021.thecvf.com/" title="ICCV 2021" target="_blank">
+            <img style="max-width: 25%" src="https://www.ait.ethz.ch/people/buehler/public/various/logo_iccv2021.png" title="ICCV 2021 Logo">
+                </a>
+    </h5>
+    </div>
+        </header>
+
+        <hr class="hr-text">
+    <div class="col-md-12">
+        <h5><a target="_blank" title="Main paper" href="http://arxiv.org/abs/2104.05988">Paper</a> |
+            <a target="_blank" title="Supplementary material" href="https://ait.ethz.ch/people/buehler/public/varitex/supp.pdf">Supplementary</a> |
+            <a target="_blank" title="GitHub" href="https://github.com/mcbuehler/VariTex">GitHub</a>
+        </h5>
+        <hr class="hr-text">
+    </div>
+
+    <div class="col-md-12">
+        <img src="https://ait.ethz.ch/people/buehler/public/varitex/teaser.png" width="97%">
+        <hr class="hr-text">
+    </div>
+
+    <div class="col-md-12">
+
+        <h2 align="center">Abstract</h2>
+
+        <div style="font-size:14px"><p align="justify">
+            <p align="justify"><i>
+            Deep generative models can synthesize photorealistic images of human faces with novel identities.
+However, a key challenge to the wide applicability of such techniques is to provide independent control over semantically meaningful parameters: appearance, head pose, face shape, and facial expressions.
+            In this paper, we propose <b>VariTex</b> - to the best of our knowledge the first method that learns a variational latent feature space of neural face textures, which allows sampling of novel identities.
+We combine this generative model with a parametric face model and gain explicit control over head pose and facial expressions.
+To generate complete images of human heads, we propose an additive decoder that adds plausible details such as hair.
+A novel training scheme enforces a pose-independent latent space and in consequence, allows learning a one-to-many mapping between latent codes and pose-conditioned exterior regions.
+The resulting method can generate geometrically consistent images of novel identities under fine-grained control over head pose, face shape, and facial expressions. This facilitates a broad range of downstream tasks, like sampling novel identities, changing the head pose, expression transfer, and more.</i></p>
+        </div>
+
+        <hr class="hr-text">
+    </div>
+
+    <div class="col-md-12">
+        <h2 align="center">Video</h2>
+    <video width="100%" controls>
+        <source src="https://ait.ethz.ch/people/buehler/public/varitex/VariTex.mp4" type="video/mp4">
+    </video>
+        <hr class="hr-text">
+    </div>
+    <div class="col-md-12">
+
+        <h2>VariTex Controls</h2>
+        <div class="row">
+            <div class="col-md-4">
+                 <video width="128" height="128" controls autoplay loop>
+              <source src="https://ait.ethz.ch/people/buehler/public/varitex/expressions.mp4" type="video/mp4">
+            </video>
+                <h4>Expressions</h4>
+            </div>
+            <div class="col-md-4">
+ <video width="128" height="128" controls autoplay loop>
+              <source src="https://ait.ethz.ch/people/buehler/public/varitex/pose.mp4" type="video/mp4">
+                <a href="https://ait.ethz.ch/people/buehler/public/varitex/pose.gif"><img width="128"
+                        src="https://ait.ethz.ch/people/buehler/public/varitex/pose.gif"
+                > </a>
+ </video>
+                <h4>Pose</h4>
+            </div>
+            <div class="col-md-4">
+                             <video width="128" height="128" controls autoplay loop>
+              <source src="https://ait.ethz.ch/people/buehler/public/varitex/interpolations.mp4" type="video/mp4">
+                <a href="https://ait.ethz.ch/people/buehler/public/varitex/interpolations.gif"><img width="128"
+                        src="https://ait.ethz.ch/people/buehler/public/varitex/interpolations.gif">
+                </a>
+            </video>
+                <h4>Identity</h4>
+            </div>
+        </div>
+        <hr class="hr-text">
+
+    </div>
+
+    <div class="col-md-12">
+        <h1 align='center'>Method</h1>
+        <img src="https://ait.ethz.ch/people/buehler/public/varitex/varitex_pipeline.jpg" width="90%">
+        <p align="justify">
+            The objective of our pipeline is to learn a Generator that can synthesize face images with arbitrary novel
+            identities whose pose and expressions can be controlled using face model parameters.
+            During training, we use unlabeled monocular RGB images to learn a smooth latent space
+            of natural face appearance using a variational encoder.
+            A latent code sampled from this space is then decoded to a novel face image.
+            At test time, we use samples drawn from a normal distribution to generate novel face images.
+            Our variationally generated <i>neural textures</i> can also be stylistically interpolated to generate
+            intermediate identities.
+        </p>
+        <hr class="hr-text">
+
+    </div>
+
+    <div class="col-md-12">
+        <h1 align='center'>Code and Models</h1>
+        Will be released soon.
+        <hr class="hr-text">
+
+    </div>
+
+
+    <div class="col-md-12">
+        <h1 align='center'>Subscribe to Updates</h1>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdlCDMlCAni4G7qS1I6SsfY2uaSp_ZQms0n7KLIKyrT-JeGBg/viewform?embedded=true" width="100%" height="640" frameborder="0" marginheight="0" marginwidth="0">
+            <p><a href="https://forms.gle/cdUTFs3ZLjZiqumi7" target="_blank" title="Subscribe (form)">Subscribe here</a></p>
+        </iframe>
+        <hr class="hr-text">
+
+    </div>
+
+    <div class="col-md-12">
+        <h2>Citation</h2>
+        <pre class="citation">
+@inproceedings{buehler2021varitex,
+  title={VariTex: Variational Neural Face Textures},
+  author={Marcel C. Buehler and Abhimitra Meka and Gengyan Li and Thabo Beeler and Otmar Hilliges},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2021}
+}        </pre>
+        <a href="https://ait.ethz.ch/people/buehler/public/varitex/varitex2021.bib">BibTeX</a>
+        <hr class="hr-text">
+
+    </div>
+
+    <div class="col-md-12">
+        <h2>Acknowledgements</h2>
+
+        <p align="justify">
+            We thank
+            <a href="https://www.ccmitss.com/zhang" target="_blank">Xucong Zhang</a>,
+            <a href="https://ait.ethz.ch/people/eaksan/" target="_blank">Emre Aksan</a>,
+            <a href="https://ait.ethz.ch/people/tlangerak/" target="_blank">Thomas Langerak</a>,
+            <a href="https://ait.ethz.ch/people/xu/" target="_blank">Xu Chen</a>,
+            <a href="https://people.ee.ethz.ch/~mshahbazi/" target="_blank">Mohamad Shahbazi</a>,
+            <a href="https://ait.ethz.ch/people/vechev/" target="_blank">Velko Vechev</a>,
+            <a href="https://liyuesolo.github.io/" target="_blank">Yue Li</a>,
+            and <a href="https://ch.linkedin.com/in/arvind-somasundaram" target="_blank">Arvind Somasundaram</a> for their contributions. We
+            also thank <a href="http://people.mpi-inf.mpg.de/~atewari/" target="_blank">Ayush Tewari</a>  for the <a href="http://gvv.mpi-inf.mpg.de/projects/StyleRig/" target="_blank">StyleRig</a> visuals.
+            This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation program grant agreement No 717054.
+        </p>
+
+    </div>
+</div>
+
+</body>
+</html
+>
