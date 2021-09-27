@@ -26,8 +26,8 @@ We train on the [FFHQ dataset](https://github.com/NVlabs/ffhq-dataset) and we us
 - [ ] FFHQ: Follow the instructions in the [FFHQ repository](https://github.com/NVlabs/ffhq-dataset) to obtain the images (.png).
 - [ ] Preprocessed dataset: [Download](https://ait.ethz.ch/people/buehler/public/varitex/preprocessed_dataset.zip) (~15 GB) and unzip.
 - [ ] Basel Face Model: Request the [model](https://faces.dmi.unibas.ch/bfm/bfm2017.html) ("model2017-1_face12_nomouth.h5"") and download the [UV parameterization](https://github.com/unibas-gravis/parametric-face-image-generator/blob/master/data/regions/face12.json).
-- [ ] Move the downloaded files to the correct locations:
 - [ ] Pretrained models: [Download](https://ait.ethz.ch/people/buehler/public/varitex/pretrained.zip) and unzip.
+- [ ] Move the downloaded files to the correct locations (see below)
 
 Environment variables should point to your data, facemodel, and (optional) output folder: `export DP=<YOUR_DATA_FOLDER>; export FP=<YOUR_FACEMODEL_FOLDER>; export OP=<YOUR_OUTPUT_FOLDER>`.
 We assume the following folder structure. 
