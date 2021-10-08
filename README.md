@@ -1,5 +1,4 @@
 # VariTex: Variational Neural Face Textures
-[Project Page](https://mcbuehler.github.io/VariTex/)  |  [Paper](http://arxiv.org/abs/2104.05988)  | [Supplementary material](https://ait.ethz.ch/people/buehler/public/varitex/supp.pdf)
 
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC4.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![Python 3.6](https://img.shields.io/badge/python-3.8.5-green.svg)
