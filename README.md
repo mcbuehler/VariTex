@@ -3,7 +3,7 @@
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC4.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![Python 3.6](https://img.shields.io/badge/python-3.8.5-green.svg)
 
-![Teaser](https://ait.ethz.ch/people/buehler/public/varitex/teaser.png)
+![Teaser](https://dataset.ait.ethz.ch/downloads/varitex/teaser.png)
 
 This is the official repository of the paper:
 
