@@ -1,7 +1,8 @@
 import lpips
 import torch
 from mutil.pytorch_utils import ImageNetNormalizeTransformInverse
-from pytorch_lightning.metrics.functional import psnr, ssim
+from torchmetrics.functional.image import peak_signal_noise_ratio as psnr
+from torchmetrics.functional.image import structural_similarity_index_measure as ssim
 
 
 class AbstractMetric(torch.nn.Module):

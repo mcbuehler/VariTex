@@ -8,7 +8,8 @@ try:
     from varitex.modules.pipeline import PipelineModule
     from varitex.visualization.batch import CompleteVisualizer
     from varitex.options import varitex_default_options
-except ModuleNotFoundError:
+except ModuleNotFoundError as e:
+    print(e)
     print("Have you added VariTex to your pythonpath?")
     print('To fix this error, go to the root path of the repository ".../VariTex/" \n '
           'and run \n'

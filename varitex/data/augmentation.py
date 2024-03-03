@@ -37,7 +37,8 @@ class CustomRandomAffine(RandomAffine):
         if self.flip:
             img = F.hflip(img)
 
-        transformed = F.affine(img, *self.ret, resample=self.resample, fillcolor=self.fillcolor)
+        transformed = F.affine(img, *self.ret,
+                               fill=self.fill)
         result = numpy.array(transformed)
         if is_uv:
             # Convert back to UV range.
