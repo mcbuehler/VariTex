@@ -8,18 +8,11 @@ from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import WandbLogger, TensorBoardLogger
 from torch.utils.data import DataLoader
 
-try:
-    from varitex.custom_callbacks.callbacks import ImageLogCallback
-    from varitex.data.npy_dataset import NPYDataset
-    from varitex.modules.pipeline import PipelineModule
-    from varitex.options.train_options import TrainOptions
-    from mutil.files import copy_src, mkdir
-except ModuleNotFoundError:
-    print("Have you added VariTex to your pythonpath?")
-    print('To fix this error, go to the root path of the repository ".../VariTex/" \n '
-          'and run \n'
-          "export PYTHONPATH=$PYTHONPATH:$(pwd)")
-    exit()
+from varitex.custom_callbacks.callbacks import ImageLogCallback
+from varitex.data.npy_dataset import NPYDataset
+from varitex.modules.pipeline import PipelineModule
+from varitex.options.train_options import TrainOptions
+from mutil.files import copy_src, mkdir
 
 
 if __name__ == "__main__":
