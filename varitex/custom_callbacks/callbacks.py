@@ -99,18 +99,12 @@ class ImageLogCallback(pl.Callback):
                 batch[k] = v.cuda()
         return batch
 
-    def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx, dataloader_idx):
+    def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx):
         if batch_idx % self.opt.display_freq == 0:
-            if trainer.gpus:
-                batch = self.batch2gpu(batch)
-
             batch = pl_module(batch, batch_idx)
             self.log_batch(pl_module, batch, batch_idx, "train")
 
     def on_validation_batch_end(self, trainer, pl_module, outputs, batch, batch_idx, dataloader_idx):
         if batch_idx == 1:
-            if trainer.gpus:
-                batch = self.batch2gpu(batch)
-
             batch = pl_module(batch, batch_idx)
             self.log_batch(pl_module, batch, batch_idx, "val")

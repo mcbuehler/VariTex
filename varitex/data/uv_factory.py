@@ -51,8 +51,8 @@ class BFMUVFactory(CustomModule):
         verts_uvs = np.array(uv_para['textureMapping']['pointData'])
         faces_uvs = np.array(uv_para['textureMapping']['triangles'])
 
-        verts_uvs = to_tensor(verts_uvs, self.device).unsqueeze(0).float()
-        faces_uvs = to_tensor(faces_uvs, self.device).unsqueeze(0).long()
+        verts_uvs = to_tensor(verts_uvs, self.device, dtype=float).unsqueeze(0).float()
+        faces_uvs = to_tensor(faces_uvs, self.device, dtype=float).unsqueeze(0).long()
 
         return verts_uvs, faces_uvs
 

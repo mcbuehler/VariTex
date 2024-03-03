@@ -8,7 +8,7 @@ from torchvision.transforms import transforms
 def to_tensor(a, device='cpu', dtype=None):
     if isinstance(a, torch.Tensor):
         return a.to(device)
-    return torch.from_numpy(np.array(a, dtype=dtype)).to(device)
+    return torch.tensor(np.array(a, dtype=dtype)).to(device)
 
 
 def tensor2np(t):
